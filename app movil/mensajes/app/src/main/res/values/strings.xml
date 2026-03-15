@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Chucho Chat</string>
+    <string name="hint_email">Correo electrónico</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_login">Iniciar Sesión</string>
+    <string name="btn_register">Crear cuenta nueva</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_apellido_p">Apellido Paterno</string>
+    <string name="hint_apellido_m">Apellido Materno (Opcional)</string>
+    <string name="hint_confirm_pass">Confirmar contraseña</string>
+    <string name="btn_register_submit">Registrarme</string>
+    <string name="btn_back_login">¿Ya tienes cuenta? Ir al Login</string>
+    <string name="title_verify">Verificar Correo</string>
+    <string name="hint_code">Código de verificación</string>
+    <string name="btn_verify">Verificar</string>
+    <string name="btn_resend">Reenviar código</string>
+    <string name="hint_search">Buscar o iniciar un nuevo chat</string>
+    <string name="hint_message">Escribe un mensaje</string>
+    <string name="title_users">Usuarios Registrados</string>
+    <string name="hint_filter_users">Filtrar usuarios…</string>
+    <string name="disconnected">Desconectado</string>
+    <string name="connected">Conectado</string>
+    <string name="subtitle_encrypted">Mensajería cifrada de extremo a extremo</string>
+    <string name="title_profile">Mi perfil</string>
+    <string name="subtitle_profile">Edita tu foto, tus datos y tu seguridad.</string>
+    <string name="hint_username">Usuario</string>
+    <string name="hint_phone">Teléfono</string>
+    <string name="btn_save">Guardar cambios</string>
+    <string name="title_change_pass">Cambiar contraseña</string>
+    <string name="hint_current_pass">Contraseña actual</string>
+    <string name="hint_new_pass">Nueva contraseña</string>
+    <string name="hint_confirm_new_pass">Confirmar nueva contraseña</string>
+    <string name="btn_update_pass">Actualizar contraseña</string>
+    <string name="hint_server_url">URL del servidor</string>
+    <string name="voice_note">🎤 Nota de voz</string>
+</resources>

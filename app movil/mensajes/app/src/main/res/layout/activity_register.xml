@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_glass_card"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:maxWidth="440dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Crear Cuenta"
+                android:textColor="@color/texto"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Únete a Chucho Chat"
+                android:textColor="@color/texto_muted"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="24dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <EditText
+                    android:id="@+id/etNombre"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_selector"
+                    android:hint="@string/hint_name"
+                    android:textColorHint="@color/texto_dark"
+                    android:textColor="@color/texto"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="16dp"
+                    android:singleLine="true"
+                    android:layout_marginEnd="6dp" />
+
+                <EditText
+                    android:id="@+id/etApellidoP"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_selector"
+                    android:hint="@string/hint_apellido_p"
+                    android:textColorHint="@color/texto_dark"
+                    android:textColor="@color/texto"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="16dp"
+                    android:singleLine="true"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etApellidoM"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/input_selector"
+                android:hint="@string/hint_apellido_m"
+                android:textColorHint="@color/texto_dark"
+                android:textColor="@color/texto"
+                android:textSize="14sp"
+                android:paddingHorizontal="16dp"
+                android:singleLine="true"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/input_selector"
+                android:hint="@string/hint_email"
+                android:textColorHint="@color/texto_dark"
+                android:textColor="@color/texto"
+                android:textSize="14sp"
+                android:paddingHorizontal="16dp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_selector"
+                    android:hint="@string/hint_password"
+                    android:textColorHint="@color/texto_dark"
+                    android:textColor="@color/texto"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="16dp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:layout_marginEnd="6dp" />
+
+                <EditText
+                    android:id="@+id/etConfirm"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_selector"
+                    android:hint="@string/hint_confirm_pass"
+                    android:textColorHint="@color/texto_dark"
+                    android:textColor="@color/texto"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="16dp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_btn_primary"
+                android:text="@string/btn_register_submit"
+                android:textColor="@color/negro"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnBackLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:text="@string/btn_back_login"
+                android:textColor="@color/acento"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                android:indeterminateTint="@color/acento" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

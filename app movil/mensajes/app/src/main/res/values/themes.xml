@@ -1,0 +1,19 @@
+<resources>
+    <style name="Theme.Mensajes" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/acento</item>
+        <item name="colorPrimaryDark">@color/acento_dark</item>
+        <item name="colorAccent">@color/acento</item>
+        <item name="android:windowBackground">@color/negro</item>
+        <item name="android:statusBarColor">@color/negro</item>
+        <item name="android:navigationBarColor">@color/negro</item>
+        <item name="android:textColorPrimary">@color/texto</item>
+        <item name="android:textColorSecondary">@color/texto_muted</item>
+    </style>
+
+    <style name="ChuchoEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/negro_input</item>
+        <item name="boxStrokeColor">@color/acento</item>
+        <item name="hintTextColor">@color/texto_muted</item>
+        <item name="android:textColor">@color/texto</item>
+    </style>
+</resources>

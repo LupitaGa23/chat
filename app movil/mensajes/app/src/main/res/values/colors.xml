@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Chucho Chat palette -->
+    <color name="platinum">#FFC0C0C0</color>
+    <color name="platinum_light">#FFD8D8D8</color>
+    <color name="platinum_dark">#FFA0A0A0</color>
+    <color name="negro">#FF0D0D0D</color>
+    <color name="negro_suave">#FF1A1A1E</color>
+    <color name="negro_card">#FF222228</color>
+    <color name="negro_hover">#FF2A2A32</color>
+    <color name="negro_input">#FF18181C</color>
+    <color name="acento">#FF4FC3F7</color>
+    <color name="acento_hover">#FF29B6F6</color>
+    <color name="acento_dark">#FF0288D1</color>
+    <color name="texto">#FFE8E8E8</color>
+    <color name="texto_muted">#FF888892</color>
+    <color name="texto_dark">#FF555560</color>
+    <color name="exito">#FF66BB6A</color>
+    <color name="error">#FFEF5350</color>
+    <color name="warning">#FFFFA726</color>
+
+    <color name="msg_mine">#FF0D2137</color>
+    <color name="msg_other">#FF222228</color>
+    <color name="bubble_border">#1AFFFFFF</color>
+    <color name="online_green">#FF66BB6A</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

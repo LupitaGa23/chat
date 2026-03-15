@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="3dp">
+
+    <LinearLayout
+        android:id="@+id/bubbleContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="280dp"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/bg_msg_other">
+
+        <TextView
+            android:id="@+id/tvSender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/acento"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/texto"
+            android:textSize="14sp"
+            android:lineSpacingExtra="2dp" />
+
+        <!-- Audio player -->
+        <LinearLayout
+            android:id="@+id/audioContainer"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:layout_marginTop="4dp">
+
+            <ImageButton
+                android:id="@+id/btnPlayAudio"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_media_play"
+                android:scaleType="centerInside"
+                android:contentDescription="Reproducir" />
+
+            <SeekBar
+                android:id="@+id/seekBarAudio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:progressTint="@color/acento"
+                android:thumbTint="@color/acento"
+                android:progressBackgroundTint="@color/texto_dark" />
+
+            <TextView
+                android:id="@+id/tvAudioDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/texto_muted"
+                android:textSize="11sp"
+                android:layout_marginStart="4dp"
+                android:text="0:00" />
+        </LinearLayout>
+
+        <!-- File info -->
+        <TextView
+            android:id="@+id/tvFileInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/texto_muted"
+            android:textSize="11sp"
+            android:visibility="gone"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textColor="@color/texto_dark"
+            android:textSize="10sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+</FrameLayout>

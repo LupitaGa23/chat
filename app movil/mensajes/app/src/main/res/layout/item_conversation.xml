@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="@drawable/bg_conversation_item"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="16dp"
+    android:orientation="horizontal">
+
+    <!-- Avatar -->
+    <FrameLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tvInitial"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_avatar_circle"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:id="@+id/dotOnline"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_gravity="end|bottom"
+            android:background="@drawable/bg_online_dot"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- Text content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/texto"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tvLastMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/texto_muted"
+            android:textSize="13sp"
+            android:singleLine="true"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <!-- Right side: time + badge -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/texto_dark"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tvBadge"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_badge"
+            android:gravity="center"
+            android:textColor="@color/negro"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

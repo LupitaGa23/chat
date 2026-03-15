@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/negro_suave"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/btnProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView
+                android:id="@+id/tvAvatarInitial"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_avatar_circle"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="U" />
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:text="usuario"
+            android:textColor="@color/texto"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+        <ImageButton
+            android:id="@+id/btnUsers"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:contentDescription="Usuarios"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="4dp" />
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_manage"
+            android:contentDescription="Perfil"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="4dp" />
+
+        <ImageButton
+            android:id="@+id/btnLogout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="Cerrar sesión"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#14FFFFFF" />
+
+    <LinearLayout
+        android:id="@+id/rowChatbot"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/bg_conversation_item"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+        <FrameLayout android:layout_width="48dp" android:layout_height="48dp">
+            <TextView android:layout_width="48dp" android:layout_height="48dp" android:background="@drawable/bg_avatar_circle" android:gravity="center" android:text="🤖" android:textSize="22sp" />
+            <TextView android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="end|bottom" android:background="@drawable/bg_badge" android:gravity="center" android:text="IA" android:textColor="@color/negro" android:textSize="8sp" android:textStyle="bold" />
+        </FrameLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chucho Bot IA" android:textColor="@color/texto" android:textSize="15sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pregúntame lo que quieras" android:textColor="@color/texto_muted" android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#0AFFFFFF" android:layout_marginHorizontal="16dp" />
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_input"
+        android:hint="@string/hint_search"
+        android:textColorHint="@color/texto_dark"
+        android:textColor="@color/texto"
+        android:textSize="13sp"
+        android:paddingHorizontal="16dp"
+        android:singleLine="true"
+        android:layout_margin="12dp" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvConversations"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="40dp"
+        android:text="No tienes conversaciones aún.\nToca el ícono de usuarios para iniciar una."
+        android:textColor="@color/texto_dark"
+        android:textSize="14sp"
+        android:lineSpacingExtra="4dp"
+        android:visibility="gone" />
+</LinearLayout>

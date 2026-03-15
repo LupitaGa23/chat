@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_glass_card"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:maxWidth="440dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✉️"
+                android:textSize="48sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_verify"
+                android:textColor="@color/texto"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingresa el código que enviamos a tu correo."
+                android:textColor="@color/texto_muted"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="24dp" />
+
+            <EditText
+                android:id="@+id/etCode"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/input_selector"
+                android:hint="@string/hint_code"
+                android:textColorHint="@color/texto_dark"
+                android:textColor="@color/texto"
+                android:textSize="18sp"
+                android:paddingHorizontal="16dp"
+                android:gravity="center"
+                android:letterSpacing="0.3"
+                android:inputType="textCapCharacters"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:id="@+id/btnVerify"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_btn_primary"
+                android:text="@string/btn_verify"
+                android:textColor="@color/negro"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnResend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:text="@string/btn_resend"
+                android:textColor="@color/acento"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:layout_marginTop="12dp" />
+
+            <Button
+                android:id="@+id/btnBackLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:text="Volver al Login"
+                android:textColor="@color/texto_muted"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                android:indeterminateTint="@color/acento" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

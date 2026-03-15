@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_revert"
+                android:scaleType="centerInside"
+                android:contentDescription="Volver" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_profile"
+                    android:textColor="@color/texto"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subtitle_profile"
+                    android:textColor="@color/texto_muted"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Avatar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_glass_card"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="20dp">
+
+            <FrameLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginBottom="16dp">
+                <TextView
+                    android:id="@+id/tvAvatarInitial"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:background="@drawable/bg_avatar_circle"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="52sp"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/btnUploadImage"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_secondary"
+                    android:text="Subir imagen"
+                    android:textColor="@color/texto"
+                    android:textSize="13sp"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="6dp" />
+                <Button
+                    android:id="@+id/btnTakePhoto"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_secondary"
+                    android:text="Tomar foto"
+                    android:textColor="@color/texto"
+                    android:textSize="13sp"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Account data -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_glass_card"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Datos de la cuenta"
+                android:textColor="@color/texto"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mantén actualizada tu información."
+                android:textColor="@color/texto_muted"
+                android:textSize="12sp"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_selector"
+                android:hint="@string/hint_name"
+                android:textColorHint="@color/texto_dark"
+                android:textColor="@color/texto"
+                android:textSize="14sp"
+                android:paddingHorizontal="14dp"
+                android:singleLine="true"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+                <EditText
+                    android:id="@+id/etApellidoP"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_selector"
+                    android:hint="@string/hint_apellido_p"
+                    android:textColorHint="@color/texto_dark"
+                    android:textColor="@color/texto"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="14dp"
+                    android:singleLine="true"
+                    android:layout_marginEnd="5dp" />
+                <EditText
+                    android:id="@+id/etApellidoM"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_selector"
+                    android:hint="@string/hint_apellido_m"
+                    android:textColorHint="@color/texto_dark"
+                    android:textColor="@color/texto"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="14dp"
+                    android:singleLine="true"
+                    android:layout_marginStart="5dp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_selector"
+                android:hint="@string/hint_username"
+                android:textColorHint="@color/texto_dark"
+                android:textColor="@color/texto"
+                android:textSize="14sp"
+                android:paddingHorizontal="14dp"
+                android:singleLine="true"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_selector"
+                android:hint="@string/hint_email"
+                android:textColorHint="@color/texto_dark"
+                android:textColor="@color/texto"
+                android:textSize="14sp"
+                android:paddingHorizontal="14dp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/etTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_selector"
+                android:hint="@string/hint_phone"
+                android:textColorHint="@color/texto_dark"
+                android:textColor="@color/texto"
+                android:textSize="14sp"
+                android:paddingHorizontal="14dp"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_btn_primary"
+                android:text="@string/btn_save"
+                android:textColor="@color/negro"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <!-- Change password -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_glass_card"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_change_pass"
+                android:textColor="@color/texto"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usa una contraseña segura y evita compartirla."
+                android:textColor="@color/texto_muted"
+                android:textSize="12sp"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etCurrentPass"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_selector"
+                android:hint="@string/hint_current_pass"
+                android:textColorHint="@color/texto_dark"
+                android:textColor="@color/texto"
+                android:textSize="14sp"
+                android:paddingHorizontal="14dp"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+                <EditText
+                    android:id="@+id/etNewPass"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_selector"
+                    android:hint="@string/hint_new_pass"
+                    android:textColorHint="@color/texto_dark"
+                    android:textColor="@color/texto"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="14dp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:layout_marginEnd="5dp" />
+                <EditText
+                    android:id="@+id/etConfirmPass"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_selector"
+                    android:hint="@string/hint_confirm_new_pass"
+                    android:textColorHint="@color/texto_dark"
+                    android:textColor="@color/texto"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="14dp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:layout_marginStart="5dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnUpdatePass"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_btn_secondary"
+                android:text="@string/btn_update_pass"
+                android:textColor="@color/texto"
+                android:textSize="14sp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:indeterminateTint="@color/acento" />
+    </LinearLayout>
+</ScrollView>

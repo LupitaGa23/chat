@@ -1,0 +1,7 @@
+Cambia la URL en app/src/main/java/com/example/mensajes/api/ApiClient.kt
+
+Busca esta linea:
+private const val DEFAULT_URL = "https://TU-DOMINIO.com/"
+
+Y reemplazala por tu dominio real, por ejemplo:
+private const val DEFAULT_URL = "https://midominio.com/"
