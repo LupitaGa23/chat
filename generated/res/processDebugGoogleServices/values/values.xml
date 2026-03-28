@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">162645079409</string>
+    <string name="google_api_key" translatable="false">AIzaSyBvHlb-qIv1iOGJkiw1DqZTMbyaF6CPiVM</string>
+    <string name="google_app_id" translatable="false">1:162645079409:android:793fb623d4e2e1a437f2d0</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBvHlb-qIv1iOGJkiw1DqZTMbyaF6CPiVM</string>
+    <string name="google_storage_bucket" translatable="false">chucho-chat.firebasestorage.app</string>
+    <string name="project_id" translatable="false">chucho-chat</string>
+</resources>
